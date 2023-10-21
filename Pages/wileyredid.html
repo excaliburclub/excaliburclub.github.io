@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Design 2</title>
+
+        <style>
+            html{
+                width:100%;
+                height:100%;
+                cursor:url(../images/cursor.png), auto;
+            }
+            body{
+                width:100%;
+                height:100%;
+                background-image: url("../Images/exaly.png");
+                background-repeat: no-repeat;
+                background-position: 50%;
+                overflow: hidden;
+                font-family: monospace;
+            }
+            
+            #socials{
+                height:90%;
+                width:90%;
+                margin:auto;
+                justify-content: space-between;
+                display: flex;
+                
+            }
+            #instagram{
+                height:100%;
+                margin-right: 5%;
+                background-color: #ffffff;   
+            }
+            #twitter{
+                height:100%;
+
+                background-color: #ffffff;   
+            }
+            #blog{
+                height:100%;
+                margin-right: 5%;
+                background-color: #ffffff;   
+            }
+
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            .wiley::-webkit-scrollbar {
+            display: none;
+            }
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            .wiley {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            }
+           
+            /* .hi{
+                flex: 1 1 calc(33.3333% - 4.75rem);
+                transition: flex 0.5s ease-in-out;
+                transform: scale(0);
+                transition: transform 0.5s ease-in-out;
+                
+            } */
+            #instagram, #blog, #twitter {
+            flex:1;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            }
+            .tasks{
+                width:100%;
+                height:3%;
+                flex:1 0 3%;
+                background-color: #f0f0f000; /* Set the background color to simulate the top bar */
+                display: flex;
+                align-items: center; /* Align items vertically */
+                justify-content: space-between; /* Put space between items */
+                background-color: #cea147;
+            }
+
+            .close-button {
+                /* position: absolute;
+                top: -5%;
+                right: 0; */
+                padding: 5px 10px;
+                cursor: pointer;
+                z-index: 1;
+            }
+            .buttons{
+                background-color: #f0f0f000;
+            }
+            .buttons:hover{
+                background-color: #ff6161;
+            }
+            .tasks h1{
+                margin: 0; /* Remove default margin for h1 */
+                padding: 5px 10px;
+            }
+            #contentofblog{
+                flex:0 2 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                overflow: scroll;
+            }
+            #contentsofblog{
+                flex:0 2 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                overflow: scroll;
+            }
+            #item{
+                /* border: #cea147 3px dashed; */
+                border-left: #cea147 5px groove;
+                border-right: #cea147 5px groove;
+                text-align: center;
+                background-color: #cea14749;
+                border-radius: 10%;
+                margin-bottom: 2%;
+                margin-top: 4%;
+                flex: 0 1 100%;
+                width:90%;
+
+            }
+            /* #item:nth-child(1){
+                margin-top:auto;
+            } */
+        </style>
+        <link rel="stylesheet" type="text/css" href="../css/purdue.css">
+    </head>
+    <body>
+        <div id="socials">
+            <div id = "instagram" class = hi>
+                <div class = "tasks">
+                    <h1>Instagram</h1>
+                    <div class="close-button"><button class = "buttons" onclick = "instaClose()">&#10006;</button></div>
+                </div>
+                <iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/wiley_excalibur/embed/?cr=1&amp;v=14&amp;wp=510&amp;rd=file%3A%2F%2F&amp;rp=%2FD%3A%2FWiley%2520Hall%2FPages%2Fwileyredid.html#%7B%22ci%22%3A0%2C%22os%22%3A33.700000047683716%2C%22ls%22%3A10.100000023841858%2C%22le%22%3A21.100000023841858%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="100%" width="100%" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="flex:0 2 100%;background: white; max-width: 540px; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;height:97.5%"></iframe>            
+            </div>
+
+            <div id = "blog" class = "hi" >
+                <div class = "tasks">
+                    <h1>Excalibur Blog</h1>
+                    <div class="close-button"><button class = "buttons"  onclick = "blogClose()">&#10006;</button></div>
+                </div>
+                <div id = contentofblog>
+                    <div id = item>
+                        <h1>Welcome to the Excalibur Network!</h1>
+                    </div>
+                    <div id = item>
+                        <h2>Here you can find all the info about the Excalibur Club for Wiley Hall.<h2>
+                    </div>
+                    <div id = item>
+                        <h2>These items here are to show the user how to use the site</h2>
+                    </div>
+                    <div id = item>
+                        <h2>They will also explain that you can do!</h2>
+                    </div>
+                    <div id = item>
+                        <h2>There can be less or more, and the box will mold to fit the shape</h2>
+                    </div>
+                    <div id = item>
+                        <h2>Enjoy your stay!</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div id = "twitter" class = "hi">
+                <div class = "tasks">
+                    <h1>Welcome!</h1>
+                    <div class="close-button"><button class = "buttons"  onclick = "twitClose()">&#10006;</button></div>
+                </div>
+                <div id = contentsofblog>
+                    <div id = item>
+                        <h1>Welcome to the Excalibur Network!</h1>
+                    </div>
+                    <div id = item>
+                        <h2>Here you can find all the info about the Excalibur Club for Wiley Hall.<h2>
+                    </div>
+                    <div id = item>
+                        <h2>These items here are to show the user how to use the site</h2>
+                    </div>
+                    <div id = item>
+                        <h2>They will also explain that you can do!</h2>
+                    </div>
+                    <div id = item>
+                        <h2>There can be less or more, and the box will mold to fit the shape</h2>
+                    </div>
+                    <div id = item>
+                        <h2>Enjoy your stay!</h2>
+                    </div>  
+                </div>
+                <!-- <iframe src = "https://twitter.com/WileyExcalibur?ref_src=twsrc%5Etfw"></iframe> -->
+                <!-- <iframe src = "https://www.housing.purdue.edu/my-housing/options/residence-halls/wiley.html" class = "wiley" style = "overflow:hidden;width:calc(100% - 5px);height:97.5%;"></iframe> -->
+                <!-- <a class="twitter-timeline" data-lang="en" data-height="200" data-theme="dark" href="https://twitter.com/WileyExcalibur?ref_src=twsrc%5Etfw">Tweets by WileyExcalibur </a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>             -->
+            </div>
+
+            
+        </div>
+       
+    </body>
+    <!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Delay the appearance of the sections to simulate loading
+  setTimeout(function() {
+    document.getElementById('instagram').style.opacity = '1';
+    document.getElementById('blog').style.opacity = '1';
+    document.getElementById('twitter').style.opacity = '1';
+  }, 1000); // Adjust the delay as needed
+});
+
+    </script> -->
+
+    <script>
+        //Dont forget you changed these numbers from 1000 to 10
+        document.addEventListener('DOMContentLoaded', function() {
+          // Delay the appearance of the sections to simulate loading
+          setTimeout(function() {
+            document.getElementById('instagram').style.opacity = '1';
+          }, 1000); // Adjust the delay as needed
+        
+          setTimeout(function() {
+            document.getElementById('blog').style.opacity = '1';
+          }, 2000); // Adjust the delay as needed
+        
+          setTimeout(function() {
+            document.getElementById('twitter').style.opacity = '1';
+          }, 3000  ); // Adjust the delay as needed
+        });
+        
+        function instaClose() {
+    var instaDiv = document.getElementById('instagram');
+    instaDiv.style.transition = 'opacity 0.5s ease-in-out';
+    instaDiv.style.opacity = '0';
+
+    setTimeout(function() {
+        instaDiv.style.display = 'none';
+    }, 500);
+}
+
+        function blogClose() {
+            var blogDiv = document.getElementById('blog');
+            blogDiv.style.transition = 'opacity 0.5s ease-in-out';
+            blogDiv.style.opacity = '0';
+
+            setTimeout(function() {
+                blogDiv.style.display = 'none';
+            }, 500);
+        }
+
+        function twitClose() {
+            var twitDiv = document.getElementById('twitter');
+            twitDiv.style.transition = 'opacity 0.5s ease-in-out';
+            twitDiv.style.opacity = '0';
+
+            setTimeout(function() {
+                twitDiv.style.display = 'none';
+            }, 500);
+        }
+        </script>
+
+</html>
