@@ -1,2 +1,3 @@
-# excaliburclub.github.io
-Excalibur Clubs Official Site
+<body>
+    <script> location.href = '/Pages/wileyredid.html'; </script>
+</body>
